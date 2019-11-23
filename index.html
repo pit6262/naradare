@@ -20,7 +20,7 @@
 		<div class="header__top">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6">
+					<div class="col-6">
 						<ul class="header-nav">
 							<li class="header-nav__item dropdown">
 								<a href="#" class="header-nav__link dropdown-link">Москва и Мо</a>
@@ -30,23 +30,43 @@
 									<li><a href="#">Москва</a></li>
 								</ul>
 							</li>
-							<li class="header-nav__item">
+							<li class="header-nav__item hidden-iphone">
 								<a href="#" class="header-nav__link">Добавить магазин</a>
 							</li>
 						</ul>
 					</div>
-					<div class="col-lg-6 header__top-right">
-						<div class="social header__social">
+					<div class="col-6 header__top-right">
+						<div class="social header__social hidden-lg">
 							<a href="#" class="social__link"><span class="icon-youtube"></span></a>
 							<a href="#" class="social__link"><span class="icon-fb"></span></a>
 							<a href="#" class="social__link"><span class="icon-instagram"></span></a>
 						</div>
-						<ul class="header-nav">
+						<ul class="header-nav hidden-lg">
 							<li class="header-nav__item ">
 								<a href="#" class="header-nav__link">Подписка на рассылку</a>
 							</li>
 							<li class="header-nav__item">
 								<a href="#" class="header-nav__link">О проекте</a>
+							</li>
+						</ul>
+						<ul class="header-nav visible-lg">
+							<li class="header-nav__item ">
+								<a href="#" class="header-nav__link header-nav__link--icon open-search"><span class="icon-search"></span></a>
+							</li>
+							<li class="header-nav__item visible-iphone">
+								<a href="#" class="header-nav__link header-nav__link--icon"><span class="icon-user"></span></a>
+							</li>
+							<li class="header-nav__item visible-iphone">
+								<a href="#" class="header-nav__link header-nav__link--icon is-badge"><span class="icon-heart-active"></span></a>
+							</li>
+							<li class="header-nav__item visible-iphone">
+								<a href="#" class="header-nav__link header-nav__link--icon is-badge"><span class="icon-compare"></span></a>
+							</li>
+							<li class="header-nav__item hidden-iphone">
+								<a href="#" class="header-nav__link">Вход</a>
+							</li>
+							<li class="header-nav__item hidden-iphone">
+								<a href="#" class="header-nav__link">Регистрация</a>
 							</li>
 						</ul>
 					</div>
@@ -62,37 +82,45 @@
 						<a href="#"><img src="img/Naradare.svg" alt=""></a>
 					</div>
 	
-					<a href="#" class="catalog-menu btn"><img src="img/menu_icon.png" alt="" class="ic btn-icon-left"> Каталог товаров</a>
+					<a href="#" class="catalog-menu btn"><span class="ic icon-menu"></span> <span class="hidden-iphone">Каталог товаров</span></a>
 	
-					<div class="search">
+					<div class="search ">
 						<form action="#" class="search-form">
 							<input type="text" placeholder="Я ищу..." class="search-form__input">
-							<button type="submit" class="btn search-form__button ">Поиск</button>
+							<button type="submit" class="btn search-form__button "><span class="hidden-xl">Поиск</span> <span class="icon-search visible-xl"></span></button>
 						</form>
 					</div>
 	
-					<div class="user-block">
+					<div class="user-block hidden-lg">
 						<a href="#" class="user-block__link">Вход</a> |
 						<a href="#" class="user-block__link">Регистрация</a>
 					</div>
 	
-					<div class="basket">
+					<div class="basket hidden-iphone">
 						<div class="basket-nav">
 							<a href="#" class="basket-nav__link">
-								<img src="img/whishlist.png" alt="" class="ic">
+								<span class="ic icon-heart"></span>
 								<span class="badge">12</span>
 							</a>
 							<a href="#" class="basket-nav__link">
-								<img src="img/compare.png" alt="" class="ic">
+								<span class="ic icon-compare_new"></span>
 								<span class="badge">0</span>
 							</a>
-							<a href="#" class="basket-nav__link">
-								<img src="img/bag.png" alt="" class="ic">
+							<a href="#" class="basket-nav__link" data-tooltip="Товар добавлен в корзину"  data-tooltip-success>
+								<span class="ic icon-shopping-cart_new"></span>
 								<span class="badge">22</span>
 							</a>
 						</div>
 						<a href="#" class="basket__price"><span class="rub">a</span> 0.00</a>
-					</div>		
+					</div>	
+					<div class="basket visible-iphone">
+						<div class="basket-nav">
+							<a href="#" class="basket-nav__link">
+								<span class="ic icon-shoping-cart"></span>
+								<span class="badge">22</span>
+							</a>
+						</div>
+					</div>	
 	
 				</div>
 			</div>
@@ -1283,14 +1311,14 @@
 	<!-- BEGIN FOOTER -->
 	<footer class="footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
+			<div class="footer-wrap">
+				<div class="footer-wrap__item first">
 					<div class="logo footer__logo">
 						<a href="#"><img src="img/Naradare_big.svg" alt=""></a>
 					</div>
 					<p class="mb0">Пользовательское соглашение</p>
 				</div>
-				<div class="col-lg-2">
+				<div class="footer-wrap__item">
 					<ul class="footer-nav">
 						<li class="footer-nav__item">
 							<a href="#" class="footer-nav__link">Контакты</a>
@@ -1301,7 +1329,7 @@
 					</ul>
 				</div>
 	
-				<div class="col-lg-2">
+				<div class="footer-wrap__item">
 					<ul class="footer-nav">
 						<li class="footer-nav__item">
 							<a href="#" class="footer-nav__link">Условия доставки</a>
@@ -1311,7 +1339,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-2">
+				<div class="footer-wrap__item">
 					<ul class="footer-nav">
 						<li class="footer-nav__item">
 							<a href="#" class="footer-nav__link">Добавить магазин</a>
@@ -1329,6 +1357,9 @@
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.formstyler.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+
 <script async src="https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru_RU&onload=getYaMap"></script>
 <script src="js/custom.js"></script>
 

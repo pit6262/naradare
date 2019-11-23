@@ -11,17 +11,22 @@ $(function(){
 	$(".catalog-menu").on('click',function(){
 	    $('.navbar').toggleClass("is-open");
 	    $('.overlay').toggleClass("is-open");
+	    $('.header').toggleClass("index");
 	    $('body').toggleClass("lock");
 	});
 
+
 	$(".navbar__close").on('click',function(){
 	    $('.navbar').removeClass("is-open");
+	    $('.header').removeClass("index");
 	    $('.overlay').removeClass("is-open");
 	    $('body').removeClass("lock");
 	});
 
 	$(".overlay").on('click',function(){
 	    $('.navbar').removeClass("is-open");
+	    $('.filter').removeClass("is-open");
+	    $('.header').removeClass("index");
 	    $(this).removeClass("is-open");
 	     $('body').removeClass("lock");
 	});
@@ -119,6 +124,57 @@ $(function(){
 		$ul.parents('.select').toggleClass('is-selected', !! $ul.find(':selected').length);
 	});
     
+	$(".fb-toggle").on('click',function(){
+		
+		$(this).parents('.filter-block').toggleClass('is-open').find('.filter-block__body').slideToggle();
+
+	    return false;
+	});
+
+	$(".calc-open").on('click',function(){
+		
+		$(this).hide().parents('.product-inner').find('.calc').show();
+
+	    return false;
+	});
+
+	$(".calc-close").on('click',function(){
+		
+		$(this).parents('.product-inner').find('.calc-open').show();
+		$(this).parents('.product-inner').find('.calc').hide();
+
+	    return false;
+	});
+
+
+	$(".open-filter").on('click',function(){
+	    $('.filter').toggleClass("is-open");
+	    $('.overlay').toggleClass("is-open");
+	    $('body').toggleClass("lock");
+	});
+
+	$(".close-filter").on('click',function(){
+	    $('.filter').removeClass("is-open");
+	    $('.overlay').removeClass("is-open");
+	    $('body').removeClass("lock");
+	});
+
+	$(".open-search").on('click',function(){
+	    $('.header .search').toggleClass("is-open");
+	});
+
+	$(".bc-all a ").on('click',function(){
+		
+	    $(this).parents('.bread-crambs').find('li').not($(this)).toggleClass("is-open");
+	    namebl = $(this).text();
+        if(namebl == 'Все'){
+            $(this).text('Cвернуть');
+        }else{
+           $(this).text('Все');
+        }
+	});
+	
+	
 
 
     /* Popup */
@@ -205,6 +261,31 @@ $(function(){
         });
     };
 
+
+    /* Range */
+    if($("#range" ).length>0){
+		$("#range" ).slider({
+			range: true,
+			min: 0,
+			max: 5000,
+			values: [350, 5000],
+			slide: function( event, ui ){
+				$('#rangefrom').text(ui.values[0]);
+				$('#rangeto').text(ui.values[1]);
+			
+			},
+			change: function( event, ui ){
+				if(ui.values[0]!=$( "#range" ).slider( "option","min") || ui.values[1]!=$( "#range" ).slider( "option","max")){
+					$('#range').addClass('act');
+				}else{
+					$('#range').removeClass('act');
+				}
+			}
+		});
+		$('#rangefrom').text($( "#range" ).slider( "values", 0 ));
+		$('#rangeto').text($( "#range" ).slider( "values", 1 ));
+
+	}
 
 
 });
