@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
 </head>
 <body class="loaded">
 
@@ -20,7 +21,7 @@
 		<div class="header__top">
 			<div class="container">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 d-flex align-items-center">
 						<ul class="header-nav">
 							<li class="header-nav__item dropdown">
 								<a href="#" class="header-nav__link dropdown-link">Москва и Мо</a>
@@ -34,40 +35,36 @@
 								<a href="#" class="header-nav__link">Добавить магазин</a>
 							</li>
 						</ul>
-					</div>
-					<div class="col-6 header__top-right">
 						<div class="social header__social hidden-lg">
 							<a href="#" class="social__link"><span class="icon-youtube"></span></a>
 							<a href="#" class="social__link"><span class="icon-fb"></span></a>
 							<a href="#" class="social__link"><span class="icon-instagram"></span></a>
 						</div>
-						<ul class="header-nav hidden-lg">
+					</div>
+					<div class="col-6 header__top-right">
+						<ul class="header-nav">
+							<li class="header-nav__item visible-iphone">
+								<a href="#" class="header-nav__link open-search"><span class="icon icon-search"></span> </a>
+							</li>
 							<li class="header-nav__item ">
-								<a href="#" class="header-nav__link">Подписка на рассылку</a>
+								<a href="#" class="header-nav__link">
+									<span class="icon icon-user1"></span>
+									<span class="header-nav__text">Вход</span>
+								</a>
 							</li>
-							<li class="header-nav__item">
-								<a href="#" class="header-nav__link">О проекте</a>
-							</li>
-						</ul>
-						<ul class="header-nav visible-lg">
 							<li class="header-nav__item ">
-								<a href="#" class="header-nav__link header-nav__link--icon open-search"><span class="icon-search"></span></a>
+								<a href="#" class="header-nav__link is-badge">
+									<span class="icon icon-heart"></span>
+									<span class="header-nav__text">Избранное</span>
+								</a>
 							</li>
-							<li class="header-nav__item visible-iphone">
-								<a href="#" class="header-nav__link header-nav__link--icon"><span class="icon-user"></span></a>
+							<li class="header-nav__item ">
+								<a href="#" class="header-nav__link is-badge">
+									<span class="icon icon-shuffle"></span>
+									<span class="header-nav__text">Cравнение</span>
+								</a>
 							</li>
-							<li class="header-nav__item visible-iphone">
-								<a href="#" class="header-nav__link header-nav__link--icon is-badge"><span class="icon-heart-active"></span></a>
-							</li>
-							<li class="header-nav__item visible-iphone">
-								<a href="#" class="header-nav__link header-nav__link--icon is-badge"><span class="icon-compare"></span></a>
-							</li>
-							<li class="header-nav__item hidden-iphone">
-								<a href="#" class="header-nav__link">Вход</a>
-							</li>
-							<li class="header-nav__item hidden-iphone">
-								<a href="#" class="header-nav__link">Регистрация</a>
-							</li>
+	
 						</ul>
 					</div>
 				</div>
@@ -82,54 +79,53 @@
 						<a href="#"><img src="img/Naradare.svg" alt=""></a>
 					</div>
 	
-					<a href="#" class="catalog-menu btn"><span class="ic icon-menu"></span> <span class="hidden-iphone">Каталог товаров</span></a>
+					<a href="#" class="catalog-menu toggle-menu">
+						<span class="catalog-menu__icon"></span>
+					</a>
 	
 					<div class="search ">
 						<form action="#" class="search-form">
-							<input type="text" placeholder="Я ищу..." class="search-form__input">
-							<button type="submit" class="btn search-form__button "><span class="hidden-xl">Поиск</span> <span class="icon-search visible-xl"></span></button>
+							<input type="text" placeholder="Поиск..." class="search-form__input">
+							<button type="submit" class="search-form__button "><span class="icon-search"></span></button>
 						</form>
 					</div>
 	
-					<div class="user-block hidden-lg">
-						<a href="#" class="user-block__link">Вход</a> |
-						<a href="#" class="user-block__link">Регистрация</a>
+					<div class="basket">
+						<a href="#" class="basket__wrapper">
+							<span class="basket__icon">
+								<span class="icon icon-cart"></span>
+								<span class="badge">22</span>
+							</span>
+							<span class="basket__price">0.00 <span class="rub">a</span></span>
+						</a>
 					</div>
-	
-					<div class="basket hidden-iphone">
-						<div class="basket-nav">
-							<a href="#" class="basket-nav__link">
-								<span class="ic icon-heart"></span>
-								<span class="badge">12</span>
-							</a>
-							<a href="#" class="basket-nav__link">
-								<span class="ic icon-compare_new"></span>
-								<span class="badge">0</span>
-							</a>
-							<a href="#" class="basket-nav__link" data-tooltip="Товар добавлен в корзину"  data-tooltip-success>
-								<span class="ic icon-shopping-cart_new"></span>
-								<span class="badge">22</span>
-							</a>
-						</div>
-						<a href="#" class="basket__price"><span class="rub">a</span> 0.00</a>
-					</div>	
-					<div class="basket visible-iphone">
-						<div class="basket-nav">
-							<a href="#" class="basket-nav__link">
-								<span class="ic icon-shoping-cart"></span>
-								<span class="badge">22</span>
-							</a>
-						</div>
-					</div>	
-	
 				</div>
 			</div>
 		</div>
-	
-		<nav class="navbar">
-			
+		<nav class="n-navbar hidden-lg">
 			<div class="container">
-				<span class="navbar__close"><img src="img/close-navbar.png" alt=""></span>
+				<ul class="n-navbar-menu">
+					<li class="n-navbar-menu__item n-navbar-menu__item--btn">
+						<a href="#" class="n-navbar-menu__btn toggle-menu">
+							<div class="burger">
+								<div class="burger__icon"></div>
+							</div>
+							Каталог товаров
+						</a>
+					</li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Ламинат</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Обои</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Плитка</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Потолочные системы</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Стройматериалы</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Двери</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Сайдинг</a></li>
+				</ul>
+			</div>
+		</nav>
+		<nav class="navbar" >
+			<div class="container">
+				<span class="navbar__close"><span class="icon-close"></span></span>
 				<ul class="navbar-menu">
 					<li>
 						<a href="#">Напольные покрытия</a>
@@ -199,12 +195,6 @@
 				<li class="bread-crambs__item">Tarkett</li>
 			</ul>
 
-			<div class="banner hidden-iphone" style="background-image: url('img/banner.jpg')">
-				<div class="banner__text-red"><span>Сервис поиска лучших цен на товары для ремонта</span></div>
-				<div class="banner__text-white"><span>более 5000 товаров</span></div>
-				<div class="banner__text-dark"><span>230 магазинов в базе</span></div>
-			</div>
-
 			<div class="main-wrap">
 				
 				<div class="sidebar">
@@ -249,266 +239,264 @@
 						</div>
 
 						<div class="filter-tabs">
-							<div class="filter-tabs-nav">
-								<a href="#" class="filter-tabs-nav__link is-active">Товары</a>
-								<a href="#" class="filter-tabs-nav__link">Коллекции</a>
-							</div>
-							<div class="filter-tabs-body">
-								<div class="filter-block is-open">
-									<div class="filter-block__head fb-toggle">
-										<div class="filter-block__title">Цена</div>
-										<div class="filter-block__toggle"></div>
-									</div>
-									<div class="filter-block__body">
-										<div class="range">
-											<div id="range" class="range-scroll"></div>
-											<div class="range__row">
-												<div class="range__title">Цена:</div>
-												<div class="range__item">
-													<span id="rangefrom" readonly="" ></span>
-												</div>
-												<div class="range__devider">—</div>
-												<div class="range__item">
-													<span id="rangeto" readonly="" ></span>
-												</div>
-												<div class="range__button">
-													<a href="#" class="btn">ОК</a>
-												</div>
+							
+							
+							<div class="filter-block is-open">
+								<div class="filter-block__head fb-toggle">
+									<div class="filter-block__title">Цена</div>
+									<div class="filter-block__toggle"></div>
+								</div>
+								<div class="filter-block__body">
+									<div class="range">
+										<div id="range" class="range-scroll"></div>
+										<div class="range__row">
+											
+											<div class="range__item">
+												<input type="text" id="rangefrom" readonly="" value="350"/>
+											</div>
+											<div class="range__devider">—</div>
+											<div class="range__item">
+												<input type="text" id="rangeto" readonly="" value="12 398"/>
+												
+											</div>
+											<div class="range__button">
+												<a href="#" class="btn">ОК</a>
 											</div>
 										</div>
 									</div>
-									
 								</div>
-								<div class="filter-block is-open">
-									<div class="filter-block__head fb-toggle">
-										<div class="filter-block__title">Фаска</div>
-										<div class="filter-block__toggle"></div>
-									</div>
-									<div class="filter-block__body">
-										<ul class="filter-check-list ">
-											<li>
-												<label class="checkbox">
-													<input type="checkbox" checked="">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">2-х сторонняя</span>
-													<span class="kbd-count">135</span>
-												</label>
-												<div class="filter-fix-message" style="display: none">
-													<a href="#" class="btn btn--purpule btn--sm">Показать 35 товаров</a>
-												</div>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">4-х сторонняя</span>
-													<span class="kbd-count">5</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">Без фаски</span>
-													<span class="kbd-count">12</span>
-												</label>
-											</li>
-										</ul>
-									</div>
+								
+							</div>
+							<div class="filter-block is-open">
+								<div class="filter-block__head fb-toggle">
+									<div class="filter-block__title">Фаска</div>
+									<div class="filter-block__toggle"></div>
 								</div>
-								<div class="filter-block is-open">
-									<div class="filter-block__head fb-toggle">
-										<div class="filter-block__title">Толщина</div>
-										<div class="filter-block__toggle"></div>
-									</div>
-									<div class="filter-block__body">
-										<ul class="filter-check-list ">
-											<li>
-												<label class="checkbox">
-													<input type="checkbox" checked="">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">6 мм</span>
-													<span class="kbd-count">135</span>
-												</label>
-												
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">8 мм</span>
-													<span class="kbd-count">5</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">9 мм</span>
-													<span class="kbd-count">12</span>
-												</label>
-											</li>
-										</ul>
+								<div class="filter-block__body">
+									<ul class="filter-check-list ">
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" checked="">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">2-х сторонняя</span>
+												<span class="kbd-count">(135)</span>
+											</label>
+											<div class="filter-fix-message" style="display: none">
+												<a href="#" class="btn btn--purpule btn--sm">Показать 35 товаров</a>
+											</div>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">4-х сторонняя</span>
+												<span class="kbd-count">(5)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">Без фаски</span>
+												<span class="kbd-count">(12)</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter-block is-open">
+								<div class="filter-block__head fb-toggle">
+									<div class="filter-block__title">Толщина</div>
+									<div class="filter-block__toggle"></div>
+								</div>
+								<div class="filter-block__body">
+									<ul class="filter-check-list ">
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" checked="">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">6 мм</span>
+												<span class="kbd-count">(135)</span>
+											</label>
+											
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">8 мм</span>
+												<span class="kbd-count">(5)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">9 мм</span>
+												<span class="kbd-count">(12)</span>
+											</label>
+										</li>
+									</ul>
 
-										<a href="#" class="filter-link">Показать все</a>
-									</div>
+									<a href="#" class="filter-link">Показать все</a>
 								</div>
-								<div class="filter-block is-open">
-									<div class="filter-block__head fb-toggle">
-										<div class="filter-block__title">Цвет</div>
-										<div class="filter-block__toggle"></div>
-									</div>
-									<div class="filter-block__body">
-										<ul class="filter-check-list ">
-											<li>
-												<label class="checkbox">
-													<input type="checkbox" checked="">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">
-														<span class="color" style="background-color: #fff;"></span>
-														Белый
-													</span>
-													<span class="kbd-count">135</span>
-												</label>
-												
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">
-														<span class="color" style="background-color: #a2a2a2;"></span>
-														Серый
-													</span>
-													<span class="kbd-count">5</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">
-														<span class="color" style="background-color: #501500;"></span>
-														Коричневый
-													</span>
-													<span class="kbd-count">12</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox" checked="">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">
-														<span class="color" style="background-color: #fff;"></span>
-														Белый
-													</span>
-													<span class="kbd-count">135</span>
-												</label>
-												
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">
-														<span class="color" style="background-color: #a2a2a2;"></span>
-														Серый
-													</span>
-													<span class="kbd-count">5</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">
-														<span class="color" style="background-color: #501500;"></span>
-														Коричневый
-													</span>
-													<span class="kbd-count">12</span>
-												</label>
-											</li>
-										</ul>
-									</div>
+							</div>
+							<div class="filter-block is-open">
+								<div class="filter-block__head fb-toggle">
+									<div class="filter-block__title">Цвет</div>
+									<div class="filter-block__toggle"></div>
 								</div>
-								<div class="filter-block ">
-									<div class="filter-block__head fb-toggle">
-										<div class="filter-block__title">Ширина</div>
-										<div class="filter-block__toggle"></div>
-									</div>
-									<div class="filter-block__body" style="display: none;">
-										<ul class="filter-check-list ">
-											<li>
-												<label class="checkbox">
-													<input type="checkbox" >
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">6 мм</span>
-													<span class="kbd-count">135</span>
-												</label>
-												
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">8 мм</span>
-													<span class="kbd-count">5</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">9 мм</span>
-													<span class="kbd-count">12</span>
-												</label>
-											</li>
-										</ul>
-									</div>
+								<div class="filter-block__body">
+									<ul class="filter-check-list ">
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" checked="">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">
+													<span class="color" style="background-color: #fff;"></span>
+													Белый
+												</span>
+												<span class="kbd-count">(135)</span>
+											</label>
+											
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">
+													<span class="color" style="background-color: #a2a2a2;"></span>
+													Серый
+												</span>
+												<span class="kbd-count">(5)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">
+													<span class="color" style="background-color: #501500;"></span>
+													Коричневый
+												</span>
+												<span class="kbd-count">(12)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" checked="">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">
+													<span class="color" style="background-color: #fff;"></span>
+													Белый
+												</span>
+												<span class="kbd-count">(135)</span>
+											</label>
+											
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">
+													<span class="color" style="background-color: #a2a2a2;"></span>
+													Серый
+												</span>
+												<span class="kbd-count">(5)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">
+													<span class="color" style="background-color: #501500;"></span>
+													Коричневый
+												</span>
+												<span class="kbd-count">(12)</span>
+											</label>
+										</li>
+									</ul>
 								</div>
-								<div class="filter-block">
-									<div class="filter-block__head fb-toggle">
-										<div class="filter-block__title">Влагостойкость</div>
-										<div class="filter-block__toggle"></div>
-									</div>
-									<div class="filter-block__body" style="display: none;">
-										<ul class="filter-check-list ">
-											<li>
-												<label class="checkbox">
-													<input type="checkbox" >
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">6 мм</span>
-													<span class="kbd-count">135</span>
-												</label>
-												
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">8 мм</span>
-													<span class="kbd-count">5</span>
-												</label>
-											</li>
-											<li>
-												<label class="checkbox">
-													<input type="checkbox">
-													<span class="checkbox__figure"></span>
-													<span class="checkbox__text">9 мм</span>
-													<span class="kbd-count">12</span>
-												</label>
-											</li>
-										</ul>
-									</div>
+							</div>
+							<div class="filter-block ">
+								<div class="filter-block__head fb-toggle">
+									<div class="filter-block__title">Ширина</div>
+									<div class="filter-block__toggle"></div>
 								</div>
-								<div class="filter-block">
-									<div class="filter-buttons">
-										<a href="#" class="btn btn--default btn--block">Применить</a>
-										<a href="#" class="btn btn--block">Очистить</a>
-									</div>
+								<div class="filter-block__body" style="display: none;">
+									<ul class="filter-check-list ">
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" >
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">6 мм</span>
+												<span class="kbd-count">(135)</span>
+											</label>
+											
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">8 мм</span>
+												<span class="kbd-count">(5)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">9 мм</span>
+												<span class="kbd-count">(12)</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter-block">
+								<div class="filter-block__head fb-toggle">
+									<div class="filter-block__title">Влагостойкость</div>
+									<div class="filter-block__toggle"></div>
+								</div>
+								<div class="filter-block__body" style="display: none;">
+									<ul class="filter-check-list ">
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" >
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">6 мм</span>
+												<span class="kbd-count">(135)</span>
+											</label>
+											
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">8 мм</span>
+												<span class="kbd-count">(5)</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox">
+												<span class="checkbox__figure"></span>
+												<span class="checkbox__text">9 мм</span>
+												<span class="kbd-count">(12)</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter-block">
+								<div class="filter-buttons">
+									<a href="#" class="btn btn--default btn--block">Применить</a>
+									<a href="#" class="btn btn--default btn--block">Очистить</a>
 								</div>
 							</div>
 						</div>
+						
 
 						<div class="filter-block filter-popular">
 							<div class="filter-block__head">
@@ -528,6 +516,14 @@
 					</div>
 				</div>
 				<div class="content">
+					<div class="banner hidden-iphone" >
+						<div class="banner__title">Сервис поиска лучших цен на товары для ремонта</div>
+						<ul class="banner__list">
+							<li>Более 5000 товаров</li>
+							<li>230 магазинов в базе</li>
+						</ul>
+						<div class="banner__img"><img src="img/banner-img.png" alt=""></div>
+					</div>
 					<h1>Ламинат Tarkett</h1>
 
 					<div class="results">  
@@ -542,7 +538,7 @@
 
 					<div class="sorting">
 						<div class="sorting__item">
-							<div class="sorting__title hidden-iphone">Сортировать:</div>
+							<div class="sorting__title hidden-lg">Сортировать:</div>
 							<div class="sorting__body">
 								<a href="#" class="sorting__link is-active">по популярности</a>
 								<a href="#" class="sorting__link">по цене</a>
@@ -550,625 +546,532 @@
 						</div>
 						<div class="sorting__item">
 							
-							<div class="sorting__body">
-								<span class="dropdown hidden-iphone">
-									<a href="#" class="sorting__link is-active dropdown-link">Товары</a>
-									<ul class="dropdown-menu dropdown-menu--right">
-										<li class="is-active"><a href="#">Товары</a></li>
-										<li><a href="#">Коллекции</a></li>
-									</ul>
-								</span>
-								
+							<div class="sorting__body d-flex align-items-center">
+								<div class="sorting-grid">
+									<a href="#" class="sorting-grid__item is-active"><span class="icon icon-grid"></span></a>
+									<a href="#" class="sorting-grid__item"><span class="icon icon-list"></span></a>
+								</div>
+								<label class="swich">
+									<input type="checkbox">
+									<span class="swich__on">Товары</span>
+									<span class="swich__off">Коллекции</span>
+									<span class="dev"></span>
+								</label>
 							</div>
 						</div>
-						
 					</div>
+					<div class="products-grid">
+						<div class="row ">
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+									</div>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												<span class="chashback chashback--sm">+ кешбэк</span>
+											</div>
+											
+										</div>
 
-					<div class="row products-grid">
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
+										<div class="p-rating">
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+											<span class="star-count">25</span>
 										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
-									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс 8мм Влагостойкий Фаска 4-хсторонняя</a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												<span class="chashback chashback--sm">+ кешбэк</span>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<span class="s-badge s-badge--new">Новинка</span>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star-count">9</span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<span class="bonus">+ Бонус</span>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<span class="p-badge p-badge--bonus">+ Бонус</span>
+										<span class="p-badge p-badge--kesh">+ Кешбэк</span>
+										
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												<span class="chashback chashback--sm">+ кешбэк</span>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+											<span class="star-count">25</span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс 8мм Влагостойкий Фаска 4-хсторонняя</a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												<span class="chashback chashback--sm">+ кешбэк</span>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon is-remove"><span class="icon-close"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<span class="s-badge s-badge--new">Новинка</span>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star-count">9</span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<span class="p-badge p-badge--bonus">+ Бонус</span>
+										<span class="p-badge p-badge--kesh">+ Кешбэк</span>
+										
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												<span class="chashback chashback--sm">+ кешбэк</span>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+											<span class="star-count">25</span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс 8мм Влагостойкий Фаска 4-хсторонняя</a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												<span class="chashback chashback--sm">+ кешбэк</span>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<span class="s-badge s-badge--new">Новинка</span>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
+
+										<div class="p-rating">
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star is-active"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star-count">9</span>
+										</div>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
+											</div>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
+							<div class="col-xxl-3 col-md-4 col-md-4 products-grid__item">
+								<div class="product-inner">
+									<div class="like"><span class="icon-heart"></span></div>
+									<div class="product-inner__img">
+										<a href="#"><img src="img/img2.jpg" alt=""></a>
+										<span class="p-badge p-badge--bonus">+ Бонус</span>
+										<span class="p-badge p-badge--kesh">+ Кешбэк</span>
+										
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+									<div class="product-inner__body">
+										<div class="product-inner__wrapper">
+											<div class="product-inner__price">
+												от <span class="big">930</span> /м<sup>2</sup>
+												
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
+
+										<div class="p-rating">
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
+											<span class="star"><span class="icon-pointed-star"></span></span>
 										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
-									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
+										
+										<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
+										<a href="#" class="btn btn--sm calc-open">В корзину</a>
+										<div class="calc" style="display: none;">
+											<div class="calc-wrap">
+												<div class="counter counter--sm">
+													<button type="button" class="counter__btn counter__btn--minus"></button>
+													<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
+													<button type="button" class="counter__btn counter__btn--plus"></button>
+												</div>
+												<a href="#" class="btn btn--sm calc-close">ОК</a>
 											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
+											<p>4 упак. на 8 052 <span class="rub">a</span></p>
 										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
-									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
-											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
-										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
-									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
-											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
-										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-xxl-3 col-md-4 col-md-4">
-							<div class="product-inner">
-								<div class="product-inner__img">
-									<a href="#"><img src="img/img2.jpg" alt=""></a>
-									<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
-								</div>
-								<div class="product-inner__body">
-									<div class="product-inner__wrapper">
-										<div class="product-inner__price">
-											от <span class="big">930</span> <br class="hidden-iphone">
-											за м<sup>2</sup>
-										</div>
-										<div class="like">
-											<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-											<div class="like__count">2</div>
-										</div>
-									</div>	
-									<div class="description">
-										<span>Бренд: <a href="#">Tarkett</a></span>
-										<span>Коллекция: <a href="#">Kalifornia</a></span>
-									</div>
-									<div class="product-inner__title"><a href="#">Ламинат Дуб Пирей 33 Класс Влагостойкий Фаска 4-х... </a></div>
-									<a href="#" class="btn btn--sm calc-open">В корзину</a>
-									<div class="calc" style="display: none;">
-										<div class="calc-wrap">
-											<div class="counter counter--sm">
-												<button type="button" class="counter__btn counter__btn--minus"></button>
-												<span class="counter__input"><strong>8.658</strong> <span>М<sup>2</sup></span></span>
-												<button type="button" class="counter__btn counter__btn--plus"></button>
-											</div>
-											<a href="#" class="btn btn--sm calc-close">ОК</a>
-										</div>
-										<p>4 упак. на 8 052 <span class="rub">a</span></p>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-
 					<div class="more-button">
-						<a href="#" class="btn btn--block btn--default">Показать ещё</a>
+						<a href="#" class="btn btn--block btn--default2">Показать ещё</a>
 					</div>
 
 					<div class="content-fot-wrap hidden-iphone">
 						
 						<ul class="paging-list">
 							<li class="paging-list__item paging-prev">
-								<a href="#" class="paging-list__link"><img src="img/dp-arrow-left.png" alt=""></a>
+								<a href="#" class="paging-list__link"><span class="icon icon-left-arrow"></span></a>
 							</li>
 							<li class="paging-list__item ">
 								<a href="#" class="paging-list__link is-active">1</a>
@@ -1180,7 +1083,7 @@
 								<a href="#" class="paging-list__link">3</a>
 							</li>
 							<li class="paging-list__item paging-next">
-								<a href="#" class="paging-list__link"><img src="img/dp-arrow-right.png" alt=""></a>
+								<a href="#" class="paging-list__link"><span class="icon icon-arrow-point-to-right"></span></a>
 							</li>
 						</ul>
 
@@ -1196,7 +1099,83 @@
 				
 			</div>
 
-			
+			<div class="last-view hidden-lg">
+				<h3>Последние просмотренные товары (div)</h3>
+				<div class="row ">
+					<div class="col-xxl-2 col-lg-3 col-md-4">
+						<div class="product-inner">
+							<div class="like"><span class="icon-heart"></span></div>
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img4.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей </a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2 col-lg-3 col-md-4">
+						<div class="product-inner">
+							<div class="like"><span class="icon-heart"></span></div>
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img4.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей </a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2 col-lg-3 col-md-4">
+						<div class="product-inner">
+							<div class="like"><span class="icon-heart"></span></div>
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img4.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей </a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2 col-lg-3 col-md-4">
+						<div class="product-inner">
+							<div class="like"><span class="icon-heart"></span></div>
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img4.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей </a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2 col-lg-3 col-md-4">
+						<div class="product-inner">
+							<div class="like"><span class="icon-heart"></span></div>
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img4.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей </a></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-2 col-lg-3 col-md-4">
+						<div class="product-inner">
+							<div class="like"><span class="icon-heart"></span></div>
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img4.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей </a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="tab-wrap" >
 			<div class="tab-wrap__top">
@@ -1218,11 +1197,11 @@
 			
 			<div class="box-tab ">
 			
-				<div class="tab-cont is-hidden" id="tabs_2">
+				<div class="tab-cont " id="tabs_2">
 					<div class="section-map">
 						<div class="container">
 							<div class="section-map__header">
-								<p>В базе содержится <strong>230</strong> магазинов Москвы и области в которых можно купить ламинат. <br>
+								<p class="size-lg">В базе содержится <strong>230</strong> магазинов Москвы и области в которых можно купить ламинат. <br>
 								Поиск доступен по <strong>24</strong> поизводителям ламината. Найдено <strong>48</strong> магазинов продающих ламинат Tarkett.</p>
 
 								<div class="select-filter">
@@ -1457,8 +1436,9 @@
 							<div class="map-sidebar">
 								<div class="map-sidebar__header">
 									<div class="map-sidebar__title">Найдено <strong>48</strong> магазинов</div>
-									<div class="map-sidebar__logo">
-										<a href="#"><img src="img/Naradare_mini.svg" alt=""></a>
+									<div class="map-sidebar__toggle mp-toggle">
+										<img src="img/Naradare_mini.svg" alt="">
+										<span></span>
 									</div>
 								</div>
 								<div class="map-sidebar__body scroll-wrapper">
@@ -1573,7 +1553,7 @@
 						
 					</div>
 				</div>
-				<div class="tab-cont " id="tabs_3">
+				<div class="tab-cont is-hidden" id="tabs_3">
 					<div class="tab-wrap__body section-gray">
 						<div class="container">
 							<p class="size-lg mb0">Ниже представлены ТОП-3 коллекции ламината производства компании Tarkett.</p>
@@ -1584,21 +1564,19 @@
 										<div class="row">
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
 														<a href="#"><img src="img/img2.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
 														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
@@ -1607,69 +1585,63 @@
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img3.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup> <span class="chashback chashback--sm">+ Кешбэк</span>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс</a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img4.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">1 030</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий </a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img1.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Rf 33 Класс Влагостойкий Фаска </a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
@@ -1718,21 +1690,19 @@
 										<div class="row">
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
 														<a href="#"><img src="img/img2.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
 														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
@@ -1741,69 +1711,63 @@
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img3.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup> <span class="chashback chashback--sm">+ Кешбэк</span>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс</a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img4.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">1 030</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий </a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img1.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Rf 33 Класс Влагостойкий Фаска </a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
@@ -1825,7 +1789,6 @@
 											<div class="material-list__item"><img src="img/material6.jpg" alt=""></div>
 											<div class="material-list__item"><img src="img/material6.jpg" alt=""></div>
 										</div>
-
 										<a href="#" class="btn btn--purpule btn--block btn--sm visible-iphone mt20">Перейти в коллекцию</a>
 									</div>
 									<div class="collection-wrap__sidebar">
@@ -1853,21 +1816,19 @@
 										<div class="row">
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
 														<a href="#"><img src="img/img2.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
 														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
@@ -1876,69 +1837,63 @@
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img3.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup> <span class="chashback chashback--sm">+ Кешбэк</span>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс</a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img4.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">1 030</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий </a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
 											</div>
 											<div class="col-xxl-3 col-md-4 col-6">
 												<div class="product-inner">
+													<div class="like"><span class="icon-heart"></span></div>
 													<div class="product-inner__img">
-														<a href="#"><img src="img/img1.jpg" alt=""></a>
-														<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+														<a href="#"><img src="img/img2.jpg" alt=""></a>
+														<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 													</div>
 													<div class="product-inner__body">
 														<div class="product-inner__wrapper">
 															<div class="product-inner__price">
-																от <span class="big">930</span> <br>
-																за м<sup>2</sup>
+																от <span class="big">930</span> /м<sup>2</sup>
+																<span class="chashback chashback--sm">+ кешбэк</span>
 															</div>
-															<div class="like">
-																<div class="like__icon" data-tooltip-position="top" data-tooltip="В избранное"><span class="icon-heart"></span></div>
-																<div class="like__count">2</div>
-															</div>
-														</div>	
+															
+														</div>
 
-														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Rf 33 Класс Влагостойкий Фаска </a></div>
+														<div class="product-inner__title"><a href="#">Ламинат Tarkett, Дуб Пирей 33 Класс Влагостойкий Фаска 4-х</a></div>
 														<a href="#" class="btn btn--sm">В корзину</a>
 													</div>
 												</div>
@@ -1986,7 +1941,7 @@
 
 							<div class="cl-wrap">
 								
-								<a href="#" class="btn btn--default btn--block">Смотреть все коллекции</a>
+								<a href="#" class="btn btn--default2 btn--block">Смотреть все коллекции</a>
 								
 							</div>
 						</div>
@@ -1999,7 +1954,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img2.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2020,7 +1975,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img3.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2041,7 +1996,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img4.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2062,7 +2017,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img1.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2083,7 +2038,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img1.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2104,7 +2059,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img2.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2125,7 +2080,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img3.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2146,7 +2101,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img4.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2167,7 +2122,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img1.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2188,7 +2143,7 @@
 								<div class="product-inner">
 									<div class="product-inner__img">
 										<a href="#"><img src="img/img1.jpg" alt=""></a>
-										<a href="#" class="fast-view"><img src="img/view.png" alt="" class="ic"> Быстрый просмотр</a>
+										<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
 									</div>
 									<div class="product-inner__body">
 										<div class="product-inner__wrapper">
@@ -2222,6 +2177,136 @@
 					<a href="#" class="mark-block__item"><img src="img/classen.png" alt=""></a>
 					<a href="#" class="mark-block__item"><img src="img/egger.png" alt=""></a>
 					<a href="#" class="mark-block__link">показать все</a>
+				</div>
+			</div>
+		</div>
+		<div class="section section-text">
+			<div class="container">
+				<div class="row mb20">
+					<div class="col-lg-8">
+						<h2 class="mb10">Отзывы о ламинате Tarkett (H2)</h2>
+						<p>Видео-отзывы о ламинате производства Tаrkett.</p>
+					</div>
+					<div class="col-lg-4 text-lg-right">
+						<a href="#" class="btn btn-200">Добавить отзыв</a>
+					</div>
+				</div>
+				<div class="reviews-block tab-wrap">
+
+					<div class="reviews-block__content ">
+						<div class="tab-cont" id="r_1">
+							<div class="video">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/7j65Mu0kAEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="tab-cont is-hidden" id="r_2">
+							<div class="video">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/JYApv67ko8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="tab-cont is-hidden" id="r_3">
+							<div class="video">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/7j65Mu0kAEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+					<div class="reviews-block__sidebar">
+						<ul class="reviews-tab tabs">
+							<li class="reviews-tab__item is-active">
+								<a href="#r_1" class="reviews-tab__link"> 
+									<div class="reviews-tab__img"><img src="img/img.png" alt=""></div>
+									<div class="reviews-tab__content">
+										<div class="reviews-tab__title">Реальный отзыв владельца о ламинате Tarkett белый дуб</div>
+										<div class="reviews-tab__name">Егор Швецов</div>
+									</div>
+								</a>
+							</li>
+							<li class="reviews-tab__item">
+								<a href="#r_2" class="reviews-tab__link">
+									<div class="reviews-tab__img"><img src="img/img.png" alt=""></div>
+									<div class="reviews-tab__content">
+										<div class="reviews-tab__title">Реальный отзыв владельца о ламинате Tarkett белый дуб</div>
+										<div class="reviews-tab__name">Егор Швецов</div>
+									</div>
+								</a>
+							</li>
+							<li class="reviews-tab__item">
+								<a href="#r_3" class="reviews-tab__link">
+									<div class="reviews-tab__img"><img src="img/img.png" alt=""></div>
+									<div class="reviews-tab__content">
+										<div class="reviews-tab__title">Реальный отзыв владельца о ламинате Tarkett белый дуб</div>
+										<div class="reviews-tab__name">Егор Швецов</div>
+									</div>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="mt40">
+					<div class="mb40">
+						<h2>Как выбрать и купить ламинат Tarkett (H2)</h2>
+						<p>Ламинат (от лат. lamina = слой) – это прочное многослойное напольное покрытие, состоящее из прессованного древесного волокна, пропитанных смолой слоев бумаги, и верхнего износостойкого покрытия. Ламинат поставляется в виде отдельных прямоугольных досок, которые при укладке на пол соединяются замками.</p>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="mb40">
+								<h3>Tarkett (H3)</h3>
+								<p><span class="font-500">Страна</span>: Германия <br>
+								<span class="font-500">Официальный сайт:</span> www.tarkett.ru <br>
+								<span class="font-500">Адрес:</span> Москва, ул. Таганская, д.6</p>
+							</div>
+						</div>
+						<div class="col-md-7">
+							<h3>Рейтинг по отзывам (H3)</h3>
+							<div class="p-rating p-rating--xl">
+								<span class="star is-active"><span class="icon-pointed-star"></span></span>
+								<span class="star is-active"><span class="icon-pointed-star"></span></span>
+								<span class="star is-active"><span class="icon-pointed-star"></span></span>
+								<span class="star"><span class="icon-pointed-star05"><span class="path1"></span><span class="path2"></span></span></span>
+								<span class="star "><span class="icon-pointed-star"></span></span>
+								
+							</div>
+							<p>3.5 из 5, на основе 128 отзывов otzovik.com</p>
+						</div>
+					</div>
+					<div class="">
+						<h3>Популярные производители ламината (H3)</h3>
+						<div class="row">
+							<div class="col-lg-3 col-md-4">
+								<ul class="p-nav">
+									<li><a href="#">Ламинат Quick Step</a></li>
+									<li><a href="#">Ламинат Egger</a></li>
+									<li><a href="#">Ламинат Kronotex</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-4">
+								<ul class="p-nav">
+									<li><a href="#">Ламинат Classen</a></li>
+									<li><a href="#">Ламинат Tarkett</a></li>
+									<li><a href="#">Ламинат Kronospan</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-4">
+								<ul class="p-nav">
+									<li><a href="#">Ламинат Haro</a></li>
+									<li><a href="#">Ламинат Balterio</a></li>
+									<li><a href="#">Ламинат Kronostar</a></li>
+									<li><a href="#"></a></li>
+								</ul>
+							</div>
+							<div class="col-lg-3 col-md-4">
+								<ul class="p-nav">
+									<li><a href="#">Ламинат Quick Step</a></li>
+									<li><a href="#">Ламинат Egger</a></li>
+									<li><a href="#">Ламинат Kronotex</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					
 				</div>
 			</div>
 		</div>

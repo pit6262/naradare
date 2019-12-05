@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
 </head>
 <body class="loaded">
 
@@ -20,7 +21,7 @@
 		<div class="header__top">
 			<div class="container">
 				<div class="row">
-					<div class="col-6">
+					<div class="col-6 d-flex align-items-center">
 						<ul class="header-nav">
 							<li class="header-nav__item dropdown">
 								<a href="#" class="header-nav__link dropdown-link">Москва и Мо</a>
@@ -34,40 +35,36 @@
 								<a href="#" class="header-nav__link">Добавить магазин</a>
 							</li>
 						</ul>
-					</div>
-					<div class="col-6 header__top-right">
 						<div class="social header__social hidden-lg">
 							<a href="#" class="social__link"><span class="icon-youtube"></span></a>
 							<a href="#" class="social__link"><span class="icon-fb"></span></a>
 							<a href="#" class="social__link"><span class="icon-instagram"></span></a>
 						</div>
-						<ul class="header-nav hidden-lg">
+					</div>
+					<div class="col-6 header__top-right">
+						<ul class="header-nav">
+							<li class="header-nav__item visible-iphone">
+								<a href="#" class="header-nav__link open-search"><span class="icon icon-search"></span> </a>
+							</li>
 							<li class="header-nav__item ">
-								<a href="#" class="header-nav__link">Подписка на рассылку</a>
+								<a href="#" class="header-nav__link">
+									<span class="icon icon-user1"></span>
+									<span class="header-nav__text">Вход</span>
+								</a>
 							</li>
-							<li class="header-nav__item">
-								<a href="#" class="header-nav__link">О проекте</a>
-							</li>
-						</ul>
-						<ul class="header-nav visible-lg">
 							<li class="header-nav__item ">
-								<a href="#" class="header-nav__link header-nav__link--icon open-search"><span class="icon-search"></span></a>
+								<a href="#" class="header-nav__link is-badge">
+									<span class="icon icon-heart"></span>
+									<span class="header-nav__text">Избранное</span>
+								</a>
 							</li>
-							<li class="header-nav__item visible-iphone">
-								<a href="#" class="header-nav__link header-nav__link--icon"><span class="icon-user"></span></a>
+							<li class="header-nav__item ">
+								<a href="#" class="header-nav__link is-badge">
+									<span class="icon icon-shuffle"></span>
+									<span class="header-nav__text">Cравнение</span>
+								</a>
 							</li>
-							<li class="header-nav__item visible-iphone">
-								<a href="#" class="header-nav__link header-nav__link--icon is-badge"><span class="icon-heart-active"></span></a>
-							</li>
-							<li class="header-nav__item visible-iphone">
-								<a href="#" class="header-nav__link header-nav__link--icon is-badge"><span class="icon-compare"></span></a>
-							</li>
-							<li class="header-nav__item hidden-iphone">
-								<a href="#" class="header-nav__link">Вход</a>
-							</li>
-							<li class="header-nav__item hidden-iphone">
-								<a href="#" class="header-nav__link">Регистрация</a>
-							</li>
+	
 						</ul>
 					</div>
 				</div>
@@ -82,54 +79,53 @@
 						<a href="#"><img src="img/Naradare.svg" alt=""></a>
 					</div>
 	
-					<a href="#" class="catalog-menu btn"><span class="ic icon-menu"></span> <span class="hidden-iphone">Каталог товаров</span></a>
+					<a href="#" class="catalog-menu toggle-menu">
+						<span class="catalog-menu__icon"></span>
+					</a>
 	
 					<div class="search ">
 						<form action="#" class="search-form">
-							<input type="text" placeholder="Я ищу..." class="search-form__input">
-							<button type="submit" class="btn search-form__button "><span class="hidden-xl">Поиск</span> <span class="icon-search visible-xl"></span></button>
+							<input type="text" placeholder="Поиск..." class="search-form__input">
+							<button type="submit" class="search-form__button "><span class="icon-search"></span></button>
 						</form>
 					</div>
 	
-					<div class="user-block hidden-lg">
-						<a href="#" class="user-block__link">Вход</a> |
-						<a href="#" class="user-block__link">Регистрация</a>
+					<div class="basket">
+						<a href="#" class="basket__wrapper">
+							<span class="basket__icon">
+								<span class="icon icon-cart"></span>
+								<span class="badge">22</span>
+							</span>
+							<span class="basket__price">0.00 <span class="rub">a</span></span>
+						</a>
 					</div>
-	
-					<div class="basket hidden-iphone">
-						<div class="basket-nav">
-							<a href="#" class="basket-nav__link">
-								<span class="ic icon-heart"></span>
-								<span class="badge">12</span>
-							</a>
-							<a href="#" class="basket-nav__link">
-								<span class="ic icon-compare_new"></span>
-								<span class="badge">0</span>
-							</a>
-							<a href="#" class="basket-nav__link" data-tooltip="Товар добавлен в корзину"  data-tooltip-success>
-								<span class="ic icon-shopping-cart_new"></span>
-								<span class="badge">22</span>
-							</a>
-						</div>
-						<a href="#" class="basket__price"><span class="rub">a</span> 0.00</a>
-					</div>	
-					<div class="basket visible-iphone">
-						<div class="basket-nav">
-							<a href="#" class="basket-nav__link">
-								<span class="ic icon-shoping-cart"></span>
-								<span class="badge">22</span>
-							</a>
-						</div>
-					</div>	
-	
 				</div>
 			</div>
 		</div>
-	
-		<nav class="navbar">
-			
+		<nav class="n-navbar hidden-lg">
 			<div class="container">
-				<span class="navbar__close"><img src="img/close-navbar.png" alt=""></span>
+				<ul class="n-navbar-menu">
+					<li class="n-navbar-menu__item n-navbar-menu__item--btn">
+						<a href="#" class="n-navbar-menu__btn toggle-menu">
+							<div class="burger">
+								<div class="burger__icon"></div>
+							</div>
+							Каталог товаров
+						</a>
+					</li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Ламинат</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Обои</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Плитка</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Потолочные системы</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Стройматериалы</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Двери</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Сайдинг</a></li>
+				</ul>
+			</div>
+		</nav>
+		<nav class="navbar" >
+			<div class="container">
+				<span class="navbar__close"><span class="icon-close"></span></span>
 				<ul class="navbar-menu">
 					<li>
 						<a href="#">Напольные покрытия</a>

@@ -8,7 +8,8 @@ $(function(){
 	/* Burger */
 	/* ---------------------------------------------- */
 
-	$(".catalog-menu").on('click',function(){
+	$(".toggle-menu").on('click',function(){
+		$(this).toggleClass('is-active');
 	    $('.navbar').toggleClass("is-open");
 	    $('.overlay').toggleClass("is-open");
 	    $('.header').toggleClass("index");
@@ -17,6 +18,7 @@ $(function(){
 
 
 	$(".navbar__close").on('click',function(){
+		$(".toggle-menu").removeClass('is-active');
 	    $('.navbar').removeClass("is-open");
 	    $('.header').removeClass("index");
 	    $('.overlay').removeClass("is-open");
@@ -24,6 +26,7 @@ $(function(){
 	});
 
 	$(".overlay").on('click',function(){
+		$(".toggle-menu").removeClass('is-active');
 	    $('.navbar').removeClass("is-open");
 	    $('.filter').removeClass("is-open");
 	    $('.header').removeClass("index");
@@ -127,6 +130,13 @@ $(function(){
 	$(".fb-toggle").on('click',function(){
 		
 		$(this).parents('.filter-block').toggleClass('is-open').find('.filter-block__body').slideToggle();
+
+	    return false;
+	});
+
+	$(".mp-toggle").on('click',function(){
+		
+		$(this).toggleClass('is-active').parents('.map-sidebar').toggleClass('is-open').find('.map-sidebar__body').slideToggle();
 
 	    return false;
 	});
@@ -267,23 +277,21 @@ $(function(){
 		$("#range" ).slider({
 			range: true,
 			min: 0,
-			max: 5000,
-			values: [350, 5000],
+			max: 12398,
+			values: [350, 10398],
 			slide: function( event, ui ){
-				$('#rangefrom').text(ui.values[0]);
-				$('#rangeto').text(ui.values[1]);
+				$('#rangefrom').val(ui.values[0].toLocaleString());
+				$('#rangeto').val(ui.values[1].toLocaleString());
 			
 			},
-			change: function( event, ui ){
-				if(ui.values[0]!=$( "#range" ).slider( "option","min") || ui.values[1]!=$( "#range" ).slider( "option","max")){
-					$('#range').addClass('act');
-				}else{
-					$('#range').removeClass('act');
-				}
-			}
+			
 		});
-		$('#rangefrom').text($( "#range" ).slider( "values", 0 ));
-		$('#rangeto').text($( "#range" ).slider( "values", 1 ));
+		$("#rangefrom").on('change', function() {
+	    	$("#range").slider('values',0,$(this).val());
+		});
+		$("#rangeto").on('change', function() {
+		    $("#range").slider('values',1,$(this).val());
+		});
 
 	}
 
