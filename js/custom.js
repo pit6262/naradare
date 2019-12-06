@@ -53,7 +53,7 @@ $(function(){
 	//     return false;
 	// });
 
-	$(".like__icon").on('click',function(){
+	$(".like").on('click',function(){
 		if($(this).hasClass('is-active')) {
 			$(this).removeClass('is-active')
 		
@@ -257,6 +257,26 @@ $(function(){
         	asNavFor: '.card-slider-for',
         	prevArrow: '<button class="slick-arr slick-prev"></button>',
         	nextArrow: '<button class="slick-arr slick-next"></button>',
+        	responsive: [
+        		{
+        			breakpoint: 1360,
+        			settings: {
+        				slidesToShow: 3,
+        			}
+        		},
+        		{
+        			breakpoint: 991,
+        			settings: {
+        				slidesToShow: 4,
+        			}
+        		},
+        		{
+        			breakpoint: 767,
+        			settings: {
+        				vertical: false,
+        			}
+        		}
+        	]
         });
     };
 
@@ -268,6 +288,34 @@ $(function(){
 
         	prevArrow: '<button class="slick-arrow slick-prev"><img src="img/slick-arrow.png" alt="" /></button>',
         	nextArrow: '<button class="slick-arrow slick-next"><img src="img/slick-arrow-next.png" alt="" /></button>',
+        	responsive: [
+        		{
+        			breakpoint: 1360,
+        			settings: {
+        				slidesToShow: 4,
+        			}
+        		},
+        		{
+        			breakpoint: 991,
+        			settings: {
+        				slidesToShow: 3,
+        			}
+        		},
+        		{
+        			breakpoint: 767,
+        			settings: {
+        				slidesToShow: 2,
+        				variableWidth: true,
+        			}
+        		},
+        		{
+        			breakpoint: 574,
+        			settings: {
+        				slidesToShow: 1,
+        				variableWidth: true,
+        			}
+        		}
+        	]
         });
     };
 
