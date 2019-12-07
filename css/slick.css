@@ -172,3 +172,17 @@
     transition: all 0.2s linear; }
   .slick-arr.slick-next:hover:after {
     border-top-color: #5fbc56; }
+
+@media screen and (max-width: 767px) {
+
+    
+
+    .slick-arr.slick-prev:hover:after {
+        border-bottom-color: transparent; 
+    }
+
+
+    .slick-arr.slick-next:hover:after {
+        border-top-color: transparent; 
+    }
+}

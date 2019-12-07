@@ -1455,6 +1455,9 @@ sup {
       margin-right: 2.1rem; }
       .card__nav-button .btn:last-child {
         margin-right: 0; }
+      .card__nav-button .btn .icon {
+        display: block;
+        font-size: 2.8rem; }
   .card .service-button {
     margin-top: 2.3rem; }
 
@@ -1487,14 +1490,16 @@ sup {
     color: #5382c8;
     padding: .5rem 1.8rem;
     border: 0.1rem solid #cccccc; }
-    .service-button__link img {
+    .service-button__link .icon {
       -webkit-box-flex: 0;
       -webkit-flex: none;
       -ms-flex: none;
       flex: none;
-      margin-right: 1.5rem; }
+      margin-right: 1.5rem;
+      font-size: 3rem;
+      color: #222222; }
     .service-button__link:hover {
-      background: #efefef;
+      background-color: #ebedf3;
       color: #222222;
       text-decoration: none; }
 
@@ -1505,7 +1510,8 @@ sup {
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
-  background-color: #00ad5d;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: #8f89c6;
   color: #fff;
   min-width: 45.7rem;
   padding: 1.5rem 2rem;
@@ -1529,19 +1535,73 @@ sup {
     height: 0px;
     border-style: solid;
     border-width: 0.7rem 0.6rem 0 0.6rem;
-    border-color: #00ad5d transparent transparent transparent; }
+    border-color: #8f89c6 transparent transparent transparent; }
   .sb-dropdown__close {
     position: absolute;
     top: .7rem;
     right: .7rem;
-    cursor: pointer; }
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    background: #4b4959 url("../img/sb-close.png") no-repeat center; }
+    .sb-dropdown__close:hover {
+      background-color: #373545; }
   .sb-dropdown__head {
-    border-bottom: .1rem solid #52c08d;
+    border-bottom: .1rem solid #ccc;
     padding-bottom: .4rem;
     margin-bottom: .6rem; }
   .sb-dropdown__title {
     font-size: 1.6rem;
     font-weight: 500; }
+
+.informer-block {
+  position: relative; }
+
+.informer-dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: -2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  min-width: 33.3rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.7rem;
+  display: none;
+  z-index: 10; }
+  .informer-dropdown > *:last-child {
+    margin-bottom: 0; }
+  .informer-dropdown > *:first-child {
+    margin-top: 0; }
+  .informer-dropdown--right {
+    left: auto;
+    right: -2rem; }
+  .informer-dropdown.is-open {
+    display: block; }
+  .informer-dropdown__close {
+    position: absolute;
+    top: .7rem;
+    right: .7rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    background: #d6dbe0 url("../img/sb-close.png") no-repeat center; }
+    .informer-dropdown__close:hover {
+      background-color: #373545; }
+  .informer-dropdown__head {
+    border-bottom: .1rem solid #ccc;
+    padding-bottom: .4rem;
+    margin-bottom: .6rem; }
+  .informer-dropdown__title {
+    font-size: 1.6rem;
+    font-weight: 500; }
+  .informer-dropdown p {
+    margin-bottom: 1rem; }
 
 .tab-wrap__head {
   background-color: #f9f9f9;
@@ -1709,7 +1769,7 @@ sup {
     top: 11rem; }
   .slider .product-inner {
     margin-bottom: 0;
-    max-width: 21rem;
+    max-width: 22rem;
     margin-left: auto;
     margin-right: auto; }
 
@@ -2828,21 +2888,32 @@ sup {
   font-size: 1.2rem;
   display: inline-block;
   vertical-align: middle;
-  height: 1.6rem;
-  line-height: 1.4rem;
-  border-radius: 0.7rem;
+  height: 2rem;
+  line-height: 1.8rem;
+  border-radius: 1rem;
   border: 0.1rem solid #5a5a5a;
   background-color: #ffffff;
   font-weight: 500;
   padding: 0 .5rem; }
   .chashback--sm {
+    height: 1.6rem;
+    line-height: 1.4rem;
     font-size: 1.1rem;
     padding: 0 .4rem; }
+  .chashback.is-active {
+    background-color: #f53ab4;
+    color: #fff;
+    border-color: #f53ab4; }
 
 .informer {
-  border: 0.1rem solid #f53ab4;
   background-color: #fff7de;
-  padding: .5rem .8rem; }
+  padding: .8rem 1rem;
+  position: relative; }
+  .informer .informer-block {
+    position: absolute;
+    left: 100%;
+    margin-left: .6rem;
+    top: 0; }
 
 .b-drop__short {
   display: block; }
@@ -4722,6 +4793,13 @@ label {
     display: block; }
   .service-button__item {
     width: 100%; }
+  .informer-dropdown {
+    max-width: 25rem;
+    min-width: 25rem;
+    left: -1rem; }
+    .informer-dropdown--right {
+      right: -1rem;
+      left: auto; }
   .nav-tab {
     display: block; }
     .nav-tab__item {

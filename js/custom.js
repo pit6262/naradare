@@ -74,6 +74,16 @@ $(function(){
 	    return false;
 	});
 
+	$(".open-informer").on('click',function(){
+	    $(this).next('.informer-dropdown').toggleClass('is-open');
+	    return false;
+	});
+
+	$(".informer-dropdown__close").on('click',function(){
+	    $(this).parents('.informer-dropdown').removeClass('is-open');
+	    return false;
+	});
+
 	$(".map-window__close").on('click',function(){
 	    $(this).parents('.map-window').hide();
 	    return false;
