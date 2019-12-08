@@ -4453,9 +4453,6 @@ label {
     -ms-flex-order: 1;
     order: 1; }
   /* Product inner */
-  .products-grid__item:nth-child(3) {
-    padding-top: 3.5rem;
-    border-top: .1rem solid #e6e6e6; }
   .like {
     display: -webkit-box;
     display: -webkit-flex;
@@ -4667,6 +4664,9 @@ label {
       position: absolute; }
   .products-list .product-inner .like {
     top: .5rem; }
+  .products-grid__item:nth-child(3) {
+    padding-top: 3.5rem;
+    border-top: .1rem solid #e6e6e6; }
   .product-inner .fast-view {
     display: none !important; }
   /* Basket */
