@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+	<title>Naradare - Сравнение товаров</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+</head>
+<body class="loaded">
+
+
+<!-- BEGIN BODY -->
+<div class="main-wrapper">
+
+	<!-- BEGIN HEADER -->
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 d-flex align-items-center">
+						<ul class="header-nav">
+							<li class="header-nav__item dropdown">
+								<a href="#" class="header-nav__link dropdown-link">Москва и Мо</a>
+								<ul class="dropdown-menu">
+									<li class="is-active"><a href="#">Москва и Мо</a></li>
+									<li><a href="#">Москва</a></li>
+									<li><a href="#">Москва</a></li>
+								</ul>
+							</li>
+							<li class="header-nav__item hidden-iphone">
+								<a href="#" class="header-nav__link">Добавить магазин</a>
+							</li>
+						</ul>
+						<div class="social header__social hidden-lg">
+							<a href="#" class="social__link"><span class="icon-youtube"></span></a>
+							<a href="#" class="social__link"><span class="icon-fb"></span></a>
+							<a href="#" class="social__link"><span class="icon-instagram"></span></a>
+						</div>
+					</div>
+					<div class="col-6 header__top-right">
+						<ul class="header-nav">
+							<li class="header-nav__item visible-iphone">
+								<a href="#" class="header-nav__link open-search"><span class="icon icon-search"></span> </a>
+							</li>
+							<li class="header-nav__item ">
+								<a href="#" class="header-nav__link">
+									<span class="icon icon-user1"></span>
+									<span class="header-nav__text">Вход</span>
+								</a>
+							</li>
+							<li class="header-nav__item ">
+								<a href="#" class="header-nav__link is-badge">
+									<span class="icon icon-heart"></span>
+									<span class="header-nav__text">Избранное</span>
+								</a>
+							</li>
+							<li class="header-nav__item ">
+								<a href="#" class="header-nav__link is-badge">
+									<span class="icon icon-shuffle"></span>
+									<span class="header-nav__text">Cравнение</span>
+								</a>
+							</li>
+	
+						</ul>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	
+		<div class="header__bottom">
+			<div class="container">
+				<div class="header__bottom-wrap">
+					<div class="logo ">
+						<a href="#"><img src="img/Naradare.svg" alt=""></a>
+					</div>
+	
+					<a href="#" class="catalog-menu toggle-menu">
+						<span class="catalog-menu__icon"></span>
+					</a>
+	
+					<div class="search ">
+						<form action="#" class="search-form">
+							<input type="text" placeholder="Поиск..." class="search-form__input">
+							<button type="submit" class="search-form__button "><span class="icon-search"></span></button>
+						</form>
+					</div>
+	
+					<div class="basket">
+						<a href="#" class="basket__wrapper">
+							<span class="basket__icon">
+								<span class="icon icon-cart"></span>
+								<span class="badge">22</span>
+							</span>
+							<span class="basket__price">0.00 <span class="rub">a</span></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav class="n-navbar hidden-lg">
+			<div class="container">
+				<ul class="n-navbar-menu">
+					<li class="n-navbar-menu__item n-navbar-menu__item--btn">
+						<a href="#" class="n-navbar-menu__btn toggle-menu">
+							<div class="burger">
+								<div class="burger__icon"></div>
+							</div>
+							Каталог товаров
+						</a>
+					</li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Ламинат</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Обои</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Плитка</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Потолочные системы</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Стройматериалы</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Двери</a></li>
+					<li class="n-navbar-menu__item"><a href="#" class="n-navbar-menu__link">Сайдинг</a></li>
+				</ul>
+			</div>
+		</nav>
+		<nav class="navbar" >
+			<div class="container">
+				<span class="navbar__close"><span class="icon-close"></span></span>
+				<ul class="navbar-menu">
+					<li>
+						<a href="#">Напольные покрытия</a>
+						<ul>
+							<li>
+								<a href="#">Ламинат</a>
+							</li>
+							<li>
+								<a href="#">Паркет</a>
+								<ul>
+									<li>
+										<a href="#">Паркетная доска</a>
+									</li>
+									<li>
+										<a href="#">Художественный паркет</a>
+										<ul>
+											<li>
+												<a href="#">Классический паркет</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#">Паркет ёлочка</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Линолеум</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Обои</a>
+					</li>
+					<li>
+						<a href="#">Двери</a>
+					</li>
+					<li>
+						<a href="#">Плитка</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- HEADER EOF   -->
+
+	<!-- BEGIN MAIN -->
+	<main class="main">
+		<div class="container">
+			<ul class="bread-crambs">
+				<li class="bread-crambs__item">
+					<a href="#" class="bread-crambs__link">Главная</a>
+				</li>
+				<li class="bread-crambs__item">Сравнение товаров</li>
+			</ul>
+			<div class="main-top">
+				<a href="#" class="btn btn--default back main-top__item"><span class="icon btn-icon-left icon-left-arrow"></span> Назад</a>
+				<h1>Сравнение товаров</h1>
+			</div>
+			<div class="button-group compare-tab">
+				<a href="#" class="btn ">Ламинат (4)</a>
+				<a href="#" class="btn btn--default">Паркет (2)</a>
+			</div>
+			<div class="compare-scroll">
+				<div class="compare-wrap">
+					<div class="compare-wrap__item">
+						<div class="product-inner">
+							
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img2.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+								<div class="remove"><span class="icon-close"></span></div>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс Влагостойкий Фаска 4-х сторонняя</a></div>
+								<div class="product-inner__wrapper">
+									<div class="product-inner__price">
+										<span class="price">от <span class="big">930</span> /м<sup>2</sup></span>
+										<span class="chashback chashback--sm">+ кешбэк</span>
+									</div>
+								</div>
+								<a href="#" class="btn btn--sm">В корзину</a>
+							</div>
+						</div>
+					</div>
+					<div class="compare-wrap__item">
+						<div class="product-inner">
+							
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img2.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+								<div class="remove"><span class="icon-close"></span></div>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс Влагостойкий Фаска 4-х сторонняя</a></div>
+								<div class="product-inner__wrapper">
+									<div class="product-inner__price">
+										<span class="price">от <span class="big">1 030</span> /м<sup>2</sup></span>
+										
+									</div>
+								</div>
+								<a href="#" class="btn btn--sm">В корзину</a>
+							</div>
+						</div>
+					</div>
+					<div class="compare-wrap__item">
+						<div class="product-inner">
+							
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img2.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+								<div class="remove"><span class="icon-close"></span></div>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс Влагостойкий Фаска 4-х сторонняя</a></div>
+								<div class="product-inner__wrapper">
+									<div class="product-inner__price">
+										<span class="price">от <span class="big">930</span> /м<sup>2</sup></span>
+										
+									</div>
+								</div>
+								<a href="#" class="btn btn--sm">В корзину</a>
+							</div>
+						</div>
+					</div>
+					<div class="compare-wrap__item">
+						<div class="product-inner">
+							
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img2.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+								<div class="remove"><span class="icon-close"></span></div>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс Влагостойкий Фаска 4-х сторонняя</a></div>
+								<div class="product-inner__wrapper">
+									<div class="product-inner__price">
+										<span class="price">от <span class="big">930</span> /м<sup>2</sup></span>
+										
+									</div>
+								</div>
+								<a href="#" class="btn btn--sm">В корзину</a>
+							</div>
+						</div>
+					</div>
+					<div class="compare-wrap__item">
+						<div class="product-inner">
+							
+							<div class="product-inner__img">
+								<a href="#"><img src="img/img2.jpg" alt=""></a>
+								<a href="#" class="fast-view"><span class="icon icon-eye"></span> Быстрый просмотр</a>
+								<div class="remove"><span class="icon-close"></span></div>
+							</div>
+							<div class="product-inner__body">
+								<div class="product-inner__title"><a href="#">Ламинат Tarkett Дуб Пирей 33 Класс Влагостойкий Фаска 4-х сторонняя</a></div>
+								<div class="product-inner__wrapper">
+									<div class="product-inner__price">
+										<span class="price">от <span class="big">930</span> /м<sup>2</sup></span>
+										
+									</div>
+								</div>
+								<a href="#" class="btn btn--sm">В корзину</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="compare-wrap" data-compare-title="Бренд">
+
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">Tarkett</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">Tarkett</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">Egger</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list"></div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list"></div>
+					</div>
+				</div>
+				<div class="compare-wrap" data-compare-title="Класс">
+
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">33</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">32</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">33</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">							</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">							</div>
+					</div>
+				</div>
+				<div class="compare-wrap" data-compare-title="Фаска">
+
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">4V</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">Без фаски</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">4V</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list"></div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list"></div>
+					</div>
+				</div>
+				<div class="compare-wrap" data-compare-title="Толщина">
+
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">8 мм</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">9 мм</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list">8 мм</div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list"></div>
+					</div>
+					<div class="compare-wrap__item compare-wrap__item--line">
+						<div class="compare-list"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+
+	</main>
+	<!-- MAIN EOF   -->
+		
+	<!-- BEGIN FOOTER -->
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-wrap">
+				<div class="footer-wrap__item first">
+					<div class="logo footer__logo">
+						<a href="#"><img src="img/Naradare_big.svg" alt=""></a>
+					</div>
+					<p class="mb0">Пользовательское соглашение</p>
+				</div>
+				<div class="footer-wrap__item">
+					<ul class="footer-nav">
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Контакты</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Обратная связь</a>
+						</li>
+					</ul>
+				</div>
+	
+				<div class="footer-wrap__item">
+					<ul class="footer-nav">
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Условия доставки</a>
+						</li>
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">О проекте</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-wrap__item">
+					<ul class="footer-nav">
+						<li class="footer-nav__item">
+							<a href="#" class="footer-nav__link">Добавить магазин</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- FOOTER EOF   -->
+
+</div>
+<!-- BODY EOF   -->
+<div class="overlay"></div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.formstyler.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+
+<script async src="https://api-maps.yandex.ru/2.1/?load=package.standard&lang=ru_RU&onload=getYaMap"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
