@@ -41,17 +41,6 @@ $(function(){
 	    return false;
 	});
 
-	// $(".like__icon").on('click',function(){
-	// 	if($(this).hasClass('is-active')) {
-	// 		$(this).removeClass('is-active').addClass('is-remove')
-	// 	} else if ($(this).hasClass('is-remove')){
-	// 		$(this).removeClass('is-remove')
-	// 	} else {
-	// 		$(this).addClass('is-active')
-	// 	}
-	    
-	//     return false;
-	// });
 
 	$(".like").on('click',function(){
 		if($(this).hasClass('is-active')) {
@@ -230,6 +219,17 @@ $(function(){
 
 	}
 	sortingGridProduct();
+
+	function openNavDropdown() {
+		$('.is-dropdown > a').on('click', function(){
+			
+			$(this).parent().toggleClass('is-open')
+			
+			return false;
+		});
+
+	}
+	openNavDropdown();
 	
 	$('.go-map').bind('click.smoothscroll',function () {
 		
@@ -293,7 +293,9 @@ $(function(){
 
 	/* Styler */
     if($('.styler').length){
-        $('.styler').styler();
+        $('.styler').styler({
+        	singleSelectzIndex: 10
+        });
     };
 
     /* Slick */
@@ -379,7 +381,20 @@ $(function(){
         	]
         });
     };
+     if($('.popup-card-slider').length){
+        $('.popup-card-slider').slick({
+        	slidesToShow: 1,
+        	arrows: true,
+        	dots: true,
 
+        	prevArrow: '<button class="slick-arr slick-prev"></button>',
+        	nextArrow: '<button class="slick-arr slick-next"></button>',
+        	appendArrows: '.popup-card-slider-nav',
+        	appendDots: '.popup-card-slider-nav',
+        });
+    };
+
+    
 
     /* Range */
     if($("#range" ).length>0){
@@ -420,23 +435,18 @@ function getYaMap(){
                 controls: [],
 
             });
+
             myMap.behaviors.disable('scrollZoom', 'drag'); 
             myMap.controls.add('zoomControl', {position: {right: '20px', bottom: '108px'}});
             myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
                 // hintContent: 'Собственный значок метки',
-                // balloonContent: 'Это красивая метка'
+                balloonContentHeader: 'Отделкино',
+            	balloonContentBody: '<p><strong>Адрес:</strong> Москва, ул. Большая Сыромятническая, д. 5к2</p><p><strong>Телефон:</strong> +7 (495) 897-52-33</p><p><strong>Режим работы:</strong> Пн-Пт - 09:00-19:00, Сб - 09:00-19:00, Вс - 09:00-19:00</p><a href="#" class="btn btn--purpule">Перейти на сайт</a>',
             }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
                 iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: 'img/pin.png',
-                // Размеры метки.
-                iconImageSize: [69, 78],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
                 
             })
+
             /* Добавляем метки на карту */
             myMap.geoObjects.add(myPlacemark);
 

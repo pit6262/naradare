@@ -80,6 +80,29 @@
     height: auto;
 
 }
+.slick-dots  {
+    list-style: none;
+}
+.slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+    margin:  0 .5rem;
+}
+.slick-dots li.slick-active button {
+    width: 14px;
+    height: 14px;
+}
+.slick-dots button {
+    padding:  0;
+    text-indent:  -999px;
+    overflow: hidden;
+    width: 10px;
+    height: 10px;
+    border:  none;
+    background: #222;
+    display: block;
+}
+
 .slick-arrow.slick-hidden {
     display: none;
 }
