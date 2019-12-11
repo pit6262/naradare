@@ -203,6 +203,26 @@ $(function(){
 	}
 	openAllNavFilter();
 
+	function openAllCollection() {
+		$('.cl-toggle').on('click', function(){
+			namebl = $(this).html();
+			dataNameBl = $(this).data('title');
+			if(namebl == dataNameBl){
+				$(this).html('Cвернуть');
+				$(this).parents('.collection-wrap__item').find('.i-hidden').removeClass('i-hidden').addClass('i-visible')
+				$(this).parents('.collection-wrap__item').find('.cl-toggle').not($(this)).html('Cвернуть');
+			}else{
+				$(this).html(dataNameBl);
+				$(this).parents('.collection-wrap__item').find('.i-visible').removeClass('i-visible').addClass('i-hidden')
+				$(this).parents('.collection-wrap__item').find('.cl-toggle').not($(this)).html(dataNameBl);
+			}
+			
+			return false;
+		});
+
+	}
+	openAllCollection();
+
 	function sortingGridProduct() {
 		$('.sorting-grid__item').on('click', function(){
 			$('.sorting-grid__item').removeClass('is-active')
