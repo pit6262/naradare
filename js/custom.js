@@ -13,7 +13,7 @@ $(function(){
 	    $('.navbar').toggleClass("is-open");
 	    $('.overlay').toggleClass("is-open");
 	    $('.header').toggleClass("index");
-	    $('body').toggleClass("lock");
+	   
 	});
 
 
@@ -22,7 +22,7 @@ $(function(){
 	    $('.navbar').removeClass("is-open");
 	    $('.header').removeClass("index");
 	    $('.overlay').removeClass("is-open");
-	    $('body').removeClass("lock");
+	   
 	});
 
 	$(".overlay").on('click',function(){
@@ -129,7 +129,7 @@ $(function(){
 	$(".fb-toggle").on('click',function(){
 		
 		$(this).parents('.filter-block').toggleClass('is-open').find('.filter-block__body').slideToggle();
-
+		$('.filter-fix-message').hide()
 	    return false;
 	});
 
@@ -265,8 +265,55 @@ $(function(){
 		
 		return false;
 	});
-	
 
+
+	function filterFixMessage() {
+		$('.fxm').on('click', function(){
+			var checkblock = $(this).find('input')
+			var obj = $(this).position().top;
+			if(checkblock.is(':checked')){
+				$('.filter-fix-message').show().css({'top': obj})
+			} else {
+				$('.filter-fix-message').hide()
+			}
+
+		});
+
+		$(document).click( function(event){
+			if( $(event.target).closest(".filter-block__body").length ) 
+			return;
+			$('.filter-fix-message').hide();
+
+			event.stopPropagation();
+		});
+
+	}
+	filterFixMessage();
+
+	
+	$(window).resize(function(event) {
+		adaptive_function();
+	});
+	function adaptive_header(w,h) {
+			var headerMenu=$('.header');
+			var headerWrap=$('.navbar');
+
+		if(w<991){
+			if(!headerWrap.hasClass('done')){
+				headerWrap.addClass('done').insertAfter(headerMenu);
+			}
+		}else{
+			if(headerWrap.hasClass('done')){
+				headerWrap.removeClass('done').appendTo(headerMenu);
+			}
+		}
+	}
+	function adaptive_function() {
+		var w=$(window).outerWidth();
+		var h=$(window).outerHeight();
+		adaptive_header(w,h);
+	}
+	adaptive_function();
 
     /* Popup */
 	/* ---------------------------------------------- */
@@ -426,8 +473,14 @@ $(function(){
 			slide: function( event, ui ){
 				$('#rangefrom').val(ui.values[0].toLocaleString());
 				$('#rangeto').val(ui.values[1].toLocaleString());
-			
+
+
+
 			},
+			stop: function(event, ui) {
+				var obj = $(this).position().top;
+				$('.filter-fix-message').show().css({'top': obj - 11})
+			}
 			
 		});
 		$("#rangefrom").on('change', function() {
