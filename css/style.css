@@ -628,7 +628,8 @@ sup {
     @media screen and (min-width: 992px) {
       .navbar-menu li:hover > a {
         color: #5382c8;
-        text-decoration: none; }
+        text-decoration: none;
+        background: #effef7; }
       .navbar-menu li:hover > .navbar-menu-dropdown {
         display: block; } }
     .navbar-menu a {
@@ -4794,7 +4795,6 @@ html.overflow-hidden body {
     -webkit-transform: translate(-100%, 0);
     -ms-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
-    display: block;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear; }
     .navbar.is-open {
@@ -4880,10 +4880,9 @@ html.overflow-hidden body {
     -ms-transform: translate(-100%, 0);
     transform: translate(-100%, 0);
     -webkit-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
-    .filter__scroll {
-      overflow-y: auto;
-      height: 100%; }
+    transition: all 0.2s linear;
+    overflow-y: auto;
+    height: 100%; }
     .filter.is-open {
       -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);

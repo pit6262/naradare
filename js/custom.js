@@ -211,10 +211,12 @@ $(function(){
 				$(this).html('Cвернуть');
 				$(this).parents('.collection-wrap__item').find('.i-hidden').removeClass('i-hidden').addClass('i-visible')
 				$(this).parents('.collection-wrap__item').find('.cl-toggle').not($(this)).html('Cвернуть');
+				$(this).parents('.collection-wrap__item').find('.material-list').hide()
 			}else{
 				$(this).html(dataNameBl);
 				$(this).parents('.collection-wrap__item').find('.i-visible').removeClass('i-visible').addClass('i-hidden')
 				$(this).parents('.collection-wrap__item').find('.cl-toggle').not($(this)).html(dataNameBl);
+				$(this).parents('.collection-wrap__item').find('.material-list').show()
 			}
 			
 			return false;
